@@ -1,4 +1,4 @@
-# README
+# Nix package (following a tutorial)
 
 This code was made following a small tutorial from https://www.youtube.com/watch?v=FFuBCgsLPlw
 
@@ -14,7 +14,7 @@ After the flake is built, to run the default binary:
 nix run
 ```
 
-I came to know about 2 phases: build and install.
+I came to know about 2 phases: **build** and **install**.
 
 It seems there are some default configuration for each phase.
 
@@ -26,9 +26,9 @@ buildPhase = ''
 '';
 ```
 
-Similar to above exists for `installPhase`.
+There exists a similar one to above for `installPhase`.
 
-If I need to use some tool that isn't available, I can make it available like this:
+If I need to use some tool during this phase that isn't available, I can make it available like this:
 
 ```nix
 buildInputs = [bat];
